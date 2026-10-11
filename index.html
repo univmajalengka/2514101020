@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Istana Stable Cikebo Majalengka — Luxury Equestrian & Country Club</title>
+  
+  <!-- FontAwesome & Google Fonts -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              dark: '#0a2318',
+              emerald: '#13402d',
+              leaf: '#235e45',
+              softgreen: '#f2f7f4',
+              mint: '#eaf3ed',
+              gold: '#c5a059',
+              goldlight: '#e8d5b5',
+              cream: '#fcfbf8',
+              sand: '#f5f2eb'
+            }
+          },
+          fontFamily: {
+            serif: ['Playfair Display', 'serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-brand-cream text-slate-800 font-sans antialiased selection:bg-brand-gold selection:text-white">
+
+  <!-- NAVBAR PREMIUM DENGAN GLASSMORPHISM ELEGANT -->
+  <header class="fixed top-0 left-0 w-full z-50 bg-brand-dark/90 backdrop-blur-lg border-b border-brand-gold/30 shadow-lg" id="navbar">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 py-4 flex items-center justify-between">
+      
+      <!-- LOGO ISTANA STABLE -->
+      <a href="#home" class="flex items-center gap-3 group">
+        <div class="w-11 h-11 rounded-full border-2 border-brand-gold/70 flex items-center justify-center bg-white/10 text-brand-goldlight group-hover:border-brand-gold transition-all duration-300 shadow-md">
+          <i class="fa-solid fa-horse-head text-xl"></i>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-serif text-xl tracking-wider text-white font-bold leading-tight group-hover:text-brand-goldlight transition-colors">ISTANA STABLE</span>
+          <span class="text-[9px] uppercase tracking-[0.25em] text-brand-goldlight">Cikebo Majalengka</span>
+        </div>
+      </a>
+
+      <!-- MENU DESKTOP DENGAN IKON SEJAJAR & STYLING ELEGAN -->
+      <nav class="hidden lg:flex items-center gap-7 text-sm font-medium tracking-wide">
+        <!-- Beranda Aktif -->
+        <a href="#home" class="text-brand-goldlight font-bold flex items-center gap-2 border-b-2 border-brand-gold pb-1 transition-all">
+          <i class="fa-solid fa-house text-sm text-brand-goldlight"></i>
+          <span>Beranda</span>
+        </a>
+        
+        <a href="#tentang" class="text-white/90 hover:text-brand-goldlight flex items-center gap-2 hover:border-b-2 hover:border-brand-gold pb-1 transition-all group">
+          <i class="fa-solid fa-circle-info text-sm text-brand-goldlight/80 group-hover:text-brand-goldlight transition-colors"></i>
+          <span>Tentang</span>
+        </a>
+        
+        <a href="#wisata" class="text-white/90 hover:text-brand-goldlight flex items-center gap-2 hover:border-b-2 hover:border-brand-gold pb-1 transition-all group">
+          <i class="fa-solid fa-compass text-sm text-brand-goldlight/80 group-hover:text-brand-goldlight transition-colors"></i>
+          <span>Wisata & Rekreasi</span>
+        </a>
+        
+        <a href="#fasilitas" class="text-white/90 hover:text-brand-goldlight flex items-center gap-2 hover:border-b-2 hover:border-brand-gold pb-1 transition-all group">
+          <i class="fa-solid fa-layer-group text-sm text-brand-goldlight/80 group-hover:text-brand-goldlight transition-colors"></i>
+          <span>Fasilitas</span>
+        </a>
+        
+        <a href="#galeri" class="text-white/90 hover:text-brand-goldlight flex items-center gap-2 hover:border-b-2 hover:border-brand-gold pb-1 transition-all group">
+          <i class="fa-solid fa-images text-sm text-brand-goldlight/80 group-hover:text-brand-goldlight transition-colors"></i>
+          <span>Galeri</span>
+        </a>
+        
+        <a href="#lokasi" class="text-white/90 hover:text-brand-goldlight flex items-center gap-2 hover:border-b-2 hover:border-brand-gold pb-1 transition-all group">
+          <i class="fa-solid fa-location-dot text-sm text-brand-goldlight/80 group-hover:text-brand-goldlight transition-colors"></i>
+          <span>Lokasi</span>
+        </a>
+      </nav>
+
+      <!-- TOMBOL RESERVASI VIP -->
+      <div class="hidden lg:block">
+        <a href="https://wa.me/6281234567890?text=Halo%20Istana%20Stable%20Cikebo,%20saya%20ingin%20info%20kunjungan" target="_blank" class="btn-gold shadow-lg shadow-brand-gold/10">
+          <span>Hubungi kami</span>
+          <i class="fa-brands fa-whatsapp text-lg"></i>
+        </a>
+      </div>
+
+      <!-- HAMBURGER MENU MOBILE -->
+      <button id="menuBtn" class="lg:hidden text-white text-2xl focus:outline-none" aria-label="Toggle Menu">
+        <i class="fa-solid fa-bars-staggered" id="menuIcon"></i>
+      </button>
+    </div>
+
+    <!-- MENU MOBILE -->
+    <div id="mobileMenu" class="hidden lg:hidden bg-brand-dark border-b border-brand-gold/20 px-6 py-6 transition-all">
+      <div class="flex flex-col gap-4 text-center font-serif text-lg">
+        <a href="#home" class="mobile-link text-brand-goldlight font-bold flex items-center justify-center gap-2 border-b-2 border-brand-gold pb-1 w-fit mx-auto">
+          <i class="fa-solid fa-house text-sm"></i>
+          <span>Beranda</span>
+        </a>
+        <a href="#tentang" class="mobile-link text-white hover:text-brand-goldlight py-2 flex items-center justify-center gap-2">
+          <i class="fa-solid fa-circle-info text-sm"></i>
+          <span>Tentang Kami</span>
+        </a>
+        <a href="#wisata" class="mobile-link text-white hover:text-brand-goldlight py-2 flex items-center justify-center gap-2">
+          <i class="fa-solid fa-compass text-sm"></i>
+          <span>Wisata & Rekreasi</span>
+        </a>
+        <a href="#fasilitas" class="mobile-link text-white hover:text-brand-goldlight py-2 flex items-center justify-center gap-2">
+          <i class="fa-solid fa-layer-group text-sm"></i>
+          <span>Fasilitas Umum</span>
+        </a>
+        <a href="#galeri" class="mobile-link text-white hover:text-brand-goldlight py-2 flex items-center justify-center gap-2">
+          <i class="fa-solid fa-images text-sm"></i>
+          <span>Galeri Foto</span>
+        </a>
+        <a href="#lokasi" class="mobile-link text-white hover:text-brand-goldlight py-2 flex items-center justify-center gap-2">
+          <i class="fa-solid fa-location-dot text-sm"></i>
+          <span>Lokasi & Kontak</span>
+        </a>
+        <a href="https://wa.me/6281234567890?text=Halo%20Istana%20Stable%20Cikebo,%20saya%20ingin%20info%20kunjungan" target="_blank" class="btn-gold justify-center mt-2">
+          <span>Hubungi kami</span>
+          <i class="fa-brands fa-whatsapp text-lg"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION (TULISAN DIPERJELAS & PADDING DISESUAIKAN) -->
+  <section id="home" class="relative min-h-[90vh] flex items-center justify-center pt-32 pb-24 overflow-hidden bg-brand-dark">
+    <div class="absolute inset-0 z-0">
+      <!-- GAMBAR BACKGROUND LOKAL wp.jpeg -->
+      <img src="wp.jpeg" alt="Istana Stable Hero" class="w-full h-full object-cover object-center filter brightness-75">
+      <!-- OVERLAY GELAP AGAR TEKS SELALU TAJAM DAN TIDAK KETUTUP -->
+      <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/95 via-brand-dark/65 to-brand-dark/50"></div>
+    </div>
+
+    <div class="relative z-10 max-w-5xl mx-auto px-6 text-center pt-6 pb-10">
+      <div class="inline-flex items-center gap-3 px-5 py-2 rounded-full bg-white/10 backdrop-blur-md border border-brand-gold/40 mb-8 shadow-xl">
+        <span class="w-2 h-2 rounded-full bg-brand-gold animate-ping"></span>
+        <span class="text-xs uppercase tracking-[0.3em] font-semibold text-brand-goldlight">Equestrian Sanctuary in Majalengka</span>
+      </div>
+
+      <h1 class="font-serif text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white tracking-tight leading-[1.1] mb-6 drop-shadow-md">
+        Kemewahan Berkuda di Tengah <span class="italic font-normal text-transparent bg-clip-text bg-gradient-to-r from-brand-goldlight via-amber-200 to-yellow-100">Alam Cikebo</span>
+      </h1>
+
+      <p class="text-base sm:text-xl text-brand-cream/95 max-w-3xl mx-auto font-light leading-relaxed mb-8 drop-shadow">
+        Nikmati pengalaman equestrian bergaya Eropa di ketinggian 800 mdpl. Paduan harmoni menunggang kuda premium, wahana edukasi, fasilitas lengkap, serta kuliner berpanorama indah.
+      </p>
+    </div>
+  </section>
+
+  <!-- HIGHLIGHT STATS BAR (POSISI DIATUR AGAR TIDAK MENUMPUK TEKS HERO) -->
+  <section class="relative z-20 -mt-10 max-w-6xl mx-auto px-6">
+    <div class="bg-gradient-to-r from-white via-brand-softgreen to-white border border-brand-gold/30 rounded-3xl p-6 md:p-8 shadow-2xl text-slate-800 grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 divide-y sm:divide-y-0 sm:divide-x divide-emerald-900/10 backdrop-blur-lg">
+      <div class="flex items-center gap-4 pt-4 sm:pt-0">
+        <div class="w-12 h-12 rounded-2xl bg-brand-emerald/10 border border-brand-emerald/20 flex items-center justify-center text-brand-emerald text-2xl shrink-0 shadow-inner">
+          <i class="fa-solid fa-horse"></i>
+        </div>
+        <div>
+          <h3 class="font-serif text-2xl font-bold text-brand-dark">20+ Kuda</h3>
+          <p class="text-xs text-slate-500 font-medium tracking-wider">Terlatih & Rawatan Khusus</p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-4 pt-4 sm:pt-0 sm:pl-6">
+        <div class="w-12 h-12 rounded-2xl bg-brand-emerald/10 border border-brand-emerald/20 flex items-center justify-center text-brand-emerald text-2xl shrink-0 shadow-inner">
+          <i class="fa-solid fa-mountain-sun"></i>
+        </div>
+        <div>
+          <h3 class="font-serif text-2xl font-bold text-brand-dark">800 MDPL</h3>
+          <p class="text-xs text-slate-500 font-medium tracking-wider">Udara Sejuk Pegunungan</p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-4 pt-4 sm:pt-0 lg:pl-6">
+        <div class="w-12 h-12 rounded-2xl bg-brand-emerald/10 border border-brand-emerald/20 flex items-center justify-center text-brand-emerald text-2xl shrink-0 shadow-inner">
+          <i class="fa-solid fa-user-shield"></i>
+        </div>
+        <div>
+          <h3 class="font-serif text-2xl font-bold text-brand-dark">100% Safe</h3>
+          <p class="text-xs text-slate-500 font-medium tracking-wider">Pendampingan Profesional</p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-4 pt-4 sm:pt-0 lg:pl-6">
+        <div class="w-12 h-12 rounded-2xl bg-brand-emerald/10 border border-brand-emerald/20 flex items-center justify-center text-brand-emerald text-2xl shrink-0 shadow-inner">
+          <i class="fa-solid fa-utensils"></i>
+        </div>
+        <div>
+          <h3 class="font-serif text-2xl font-bold text-brand-dark">Resto Cafe</h3>
+          <p class="text-xs text-slate-500 font-medium tracking-wider">Kuliner & View Lembah</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TENTANG KAMI SECTION -->
+  <section id="tentang" class="py-24 bg-gradient-to-b from-brand-cream via-brand-mint/40 to-white relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 grid lg:grid-cols-2 gap-16 items-center">
+      <div class="relative">
+        <div class="relative z-10 rounded-3xl overflow-hidden border border-brand-gold/30 shadow-2xl">
+          <img src="wp2.jpeg" alt="Istana Stable Landscape" class="w-full h-[480px] object-cover hover:scale-105 transition-transform duration-700">
+        </div>
+        <div class="absolute -bottom-8 -right-4 sm:-right-8 z-20 bg-white/95 backdrop-blur-md text-slate-800 p-6 rounded-2xl border border-brand-gold/30 shadow-2xl max-w-xs hidden sm:block">
+          <div class="flex items-center gap-3 mb-2">
+            <i class="fa-solid fa-certificate text-brand-gold text-xl"></i>
+            <span class="font-serif font-bold text-brand-dark">Standar Equestrian</span>
+          </div>
+          <p class="text-xs text-slate-600 font-light leading-relaxed">
+            Fasilitas dirancang mengutamakan kenyamanan, keamanan penunggang, serta kesejahteraan kuda.
+          </p>
+        </div>
+      </div>
+
+      <div class="flex flex-col items-start">
+        <div class="inline-flex items-center gap-2 mb-3">
+          <span class="w-8 h-[1px] bg-brand-gold"></span>
+          <span class="text-xs uppercase tracking-[0.25em] font-semibold text-brand-gold">Oase Rekreasi Majalengka</span>
+        </div>
+
+        <h2 class="font-serif text-3xl sm:text-5xl font-bold text-brand-dark leading-tight mb-6">
+          Kawasan Wisata Tematik Berkelas di Lereng Cikebo
+        </h2>
+
+        <p class="text-slate-600 leading-relaxed mb-6 font-light">
+          Istana Stable Cikebo merupakan destinasi rekreasi terpadu yang memadukan keindahan panorama alam Majalengka dengan kemewahan olahraga berkuda. Terletak di jalur udara sejuk Cikebo-Maja, kami menyajikan suasana rileks yang jauh dari kebisingan kota.
+        </p>
+
+        <p class="text-slate-600 leading-relaxed mb-8 font-light">
+          Dirancang untuk semua usia, Istana Stable menyajikan perpaduan edukasi satwa, arena berkuda, kuliner lezat khas daerah, serta ruang terbuka hijau yang estetik untuk mengabadikan momen berharga Anda.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEKSI OBJEK WISATA & REKREASI -->
+  <section id="wisata" class="py-24 bg-gradient-to-b from-white via-brand-softgreen/60 to-brand-cream relative border-t border-emerald-900/5">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="inline-flex items-center justify-center gap-2 mb-3">
+          <span class="w-8 h-[1px] bg-brand-gold"></span>
+          <span class="text-xs uppercase tracking-[0.25em] font-semibold text-brand-gold">Destinasi & Aktivitas</span>
+          <span class="w-8 h-[1px] bg-brand-gold"></span>
+        </div>
+        <h2 class="font-serif text-3xl sm:text-5xl font-bold text-brand-dark mb-4">
+          Objek Wisata Unggulan
+        </h2>
+        <p class="text-slate-600 font-light">
+          Ragam atraksi dan rekreasi menarik yang siap melengkapi keceriaan liburan Anda bersama keluarga.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="group bg-white/80 backdrop-blur-sm rounded-3xl overflow-hidden border border-brand-gold/20 shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-500 flex flex-col">
+          <div class="relative h-64 overflow-hidden">
+            <img src="pony1.jpeg" alt="Pony Ride" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/70 via-transparent to-transparent"></div>
+            <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-brand-emerald text-brand-goldlight text-xs font-semibold uppercase tracking-wider border border-brand-gold/30 shadow-md">Paling Favorit</span>
+          </div>
+          <div class="p-8 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="font-serif text-2xl font-bold text-brand-dark mb-3 group-hover:text-brand-emerald transition-colors">Pony Ride</h3>
+              <p class="text-slate-600 text-sm font-light leading-relaxed mb-6">
+                Sensasi menunggang kuda mengelilingi lintasan asri dengan pemandangan pegunungan Cikebo. Lengkap dengan helm keselamatan dan pendampingan pemandu berpengalaman.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-brand-emerald font-semibold">
+              <span>Cocok untuk Pemula & Anak</span>
+              <i class="fa-solid fa-angle-right text-brand-gold"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="group bg-white/80 backdrop-blur-sm rounded-3xl overflow-hidden border border-brand-gold/20 shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-500 flex flex-col">
+          <div class="relative h-64 overflow-hidden">
+            <img src="zoo1.jpeg" alt="Mini Zoo" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/70 via-transparent to-transparent"></div>
+            <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-brand-emerald text-brand-goldlight text-xs font-semibold uppercase tracking-wider border border-brand-gold/30 shadow-md">Edukasi Satwa</span>
+          </div>
+          <div class="p-8 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="font-serif text-2xl font-bold text-brand-dark mb-3 group-hover:text-brand-emerald transition-colors">Mini Zoo</h3>
+              <p class="text-slate-600 text-sm font-light leading-relaxed mb-6">
+                Wahana interaksi langsung untuk si kecil memberi pakan serta membelai kelinci imut, domba hias, dan aneka satwa jinak di lingkungan yang bersih.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-brand-emerald font-semibold">
+              <span>Ramah Anak & Keluarga</span>
+              <i class="fa-solid fa-angle-right text-brand-gold"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="group bg-white/80 backdrop-blur-sm rounded-3xl overflow-hidden border border-brand-gold/20 shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-500 flex flex-col">
+          <div class="relative h-64 overflow-hidden">
+            <img src="riding.jpeg" alt="Riding School" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/70 via-transparent to-transparent"></div>
+            <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-brand-emerald text-brand-goldlight text-xs font-semibold uppercase tracking-wider border border-brand-gold/30 shadow-md">Kelas Privat</span>
+          </div>
+          <div class="p-8 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="font-serif text-2xl font-bold text-brand-dark mb-3 group-hover:text-brand-emerald transition-colors">Riding School</h3>
+              <p class="text-slate-600 text-sm font-light leading-relaxed mb-6">
+                Program kursus intensif berkuda profesional untuk melatih keseimbangan, postur tubuh, serta penguasaan kemudi kuda secara terstruktur.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-brand-emerald font-semibold">
+              <span>Instruktur Profesional</span>
+              <i class="fa-solid fa-angle-right text-brand-gold"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FASILITAS PENDUKUNG KAWASAN -->
+  <section id="fasilitas" class="py-24 bg-gradient-to-b from-brand-cream via-white to-brand-softgreen/40 relative border-t border-emerald-900/5">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="inline-flex items-center justify-center gap-2 mb-3">
+          <span class="w-8 h-[1px] bg-brand-gold"></span>
+          <span class="text-xs uppercase tracking-[0.25em] font-semibold text-brand-gold">Sarana & Kenyamanan</span>
+          <span class="w-8 h-[1px] bg-brand-gold"></span>
+        </div>
+        <h2 class="font-serif text-3xl sm:text-5xl font-bold text-brand-dark mb-4">
+          Fasilitas Kawasan Lengkap
+        </h2>
+        <p class="text-slate-600 font-light">
+          Segala kelengkapan pendukung yang siap menjamin keamanan dan kenyamanan waktu bersantai Anda.
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Fasilitas 1 -->
+        <div class="p-8 rounded-3xl bg-white border border-brand-gold/20 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+          <div class="w-14 h-14 rounded-2xl bg-brand-softgreen border border-brand-emerald/20 flex items-center justify-center text-brand-emerald text-2xl mb-6 shadow-sm">
+            <i class="fa-solid fa-square-parking"></i>
+          </div>
+          <h3 class="font-serif text-xl font-bold text-brand-dark mb-2">Area Parkir Luas</h3>
+          <p class="text-slate-600 text-sm font-light leading-relaxed">
+            Kapasitas parkir teratur yang lapang dan aman untuk motor, mobil pribadi, hingga kendaraan besar/bus pariwisata.
+          </p>
+        </div>
+
+        <!-- Fasilitas 2 -->
+        <div class="p-8 rounded-3xl bg-white border border-brand-gold/20 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+          <div class="w-14 h-14 rounded-2xl bg-brand-softgreen border border-brand-emerald/20 flex items-center justify-center text-brand-emerald text-2xl mb-6 shadow-sm">
+            <i class="fa-solid fa-utensils"></i>
+          </div>
+          <h3 class="font-serif text-xl font-bold text-brand-dark mb-2">Resto & Cafe Panorama</h3>
+          <p class="text-slate-600 text-sm font-light leading-relaxed">
+            Menyajikan masakan khas Sunda, minuman hangat, dan sajian kopi nikmat berlatar pemandangan perbukitan yang indah.
+          </p>
+        </div>
+
+        <!-- Fasilitas 3 -->
+        <div class="p-8 rounded-3xl bg-white border border-brand-gold/20 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+          <div class="w-14 h-14 rounded-2xl bg-brand-softgreen border border-brand-emerald/20 flex items-center justify-center text-brand-emerald text-2xl mb-6 shadow-sm">
+            <i class="fa-solid fa-camera-retro"></i>
+          </div>
+          <h3 class="font-serif text-xl font-bold text-brand-dark mb-2">Spot Foto Estetis</h3>
+          <p class="text-slate-600 text-sm font-light leading-relaxed">
+            Area berkonsep arsitektur equestrian Eropa modern yang anggun dan fotogenik untuk latar dokumentasi.
+          </p>
+        </div>
+
+        <!-- Fasilitas 4 -->
+        <div class="p-8 rounded-3xl bg-white border border-brand-gold/20 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+          <div class="w-14 h-14 rounded-2xl bg-brand-softgreen border border-brand-emerald/20 flex items-center justify-center text-brand-emerald text-2xl mb-6 shadow-sm">
+            <i class="fa-solid fa-children"></i>
+          </div>
+          <h3 class="font-serif text-xl font-bold text-brand-dark mb-2">Taman & Playground</h3>
+          <p class="text-slate-600 text-sm font-light leading-relaxed">
+            Halaman rumput terbuka yang hijau, asri, dan aman untuk tempat bermain anak maupun bersantai keluarga.
+          </p>
+        </div>
+
+        <!-- Fasilitas 5 -->
+        <div class="p-8 rounded-3xl bg-white border border-brand-gold/20 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+          <div class="w-14 h-14 rounded-2xl bg-brand-softgreen border border-brand-emerald/20 flex items-center justify-center text-brand-emerald text-2xl mb-6 shadow-sm">
+            <i class="fa-solid fa-mosque"></i>
+          </div>
+          <h3 class="font-serif text-xl font-bold text-brand-dark mb-2">Mushola Clean & Nyaman</h3>
+          <p class="text-slate-600 text-sm font-light leading-relaxed">
+            Rumah ibadah yang senantiasa dijaga kebersihannya untuk kenyamanan ibadah Anda selama berkunjung.
+          </p>
+        </div>
+
+        <!-- Fasilitas 6 -->
+        <div class="p-8 rounded-3xl bg-white border border-brand-gold/20 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+          <div class="w-14 h-14 rounded-2xl bg-brand-softgreen border border-brand-emerald/20 flex items-center justify-center text-brand-emerald text-2xl mb-6 shadow-sm">
+            <i class="fa-solid fa-restroom"></i>
+          </div>
+          <h3 class="font-serif text-xl font-bold text-brand-dark mb-2">Toilet & Kamar Bilas</h3>
+          <p class="text-slate-600 text-sm font-light leading-relaxed">
+            Fasilitas toilet yang terawat, bersih, dan higienis demi kenyamanan pengunjung saat berbilas atau membasuh diri.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- GALERI FOTO SECTION (FORMAT SLIDER 1 BARIS) -->
+  <section id="galeri" class="py-24 bg-gradient-to-b from-brand-softgreen/40 via-white to-brand-cream border-t border-emerald-900/5 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      
+      <!-- HEADER JUDUL & TOMBOL FILTER -->
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <div class="inline-flex items-center justify-center gap-2 mb-3">
+          <span class="w-8 h-[1px] bg-brand-gold"></span>
+          <span class="text-xs uppercase tracking-[0.25em] font-semibold text-brand-gold">Dokumentasi Momen</span>
+          <span class="w-8 h-[1px] bg-brand-gold"></span>
+        </div>
+        <h2 class="font-serif text-3xl sm:text-5xl font-bold text-brand-dark mb-4">
+          Galeri Keindahan Istana Stable
+        </h2>
+        <p class="text-slate-600 font-light">
+          Potret suasana asri, kenyamanan lokasi, dan pesona kawasan Cikebo Majalengka.
+        </p>
+
+        <!-- Tombol Filter Kategori -->
+        <div class="flex flex-wrap justify-center gap-3 mt-8">
+          <button class="gallery-tab active px-5 py-2 rounded-full border border-brand-gold/30 text-xs font-semibold tracking-wider transition-all shadow-sm" onclick="filterGallery('all', this)">Semua Foto</button>
+          <button class="gallery-tab px-5 py-2 rounded-full border border-brand-gold/30 text-xs font-semibold tracking-wider transition-all shadow-sm" onclick="filterGallery('kuda', this)">Kawasan Stable</button>
+          <button class="gallery-tab px-5 py-2 rounded-full border border-brand-gold/30 text-xs font-semibold tracking-wider transition-all shadow-sm" onclick="filterGallery('resto', this)">Resto & Cafe</button>
+          <button class="gallery-tab px-5 py-2 rounded-full border border-brand-gold/30 text-xs font-semibold tracking-wider transition-all shadow-sm" onclick="filterGallery('pemandangan', this)">Spot Foto</button>
+        </div>
+      </div>
+
+      <!-- WADAH CAROUSEL / SLIDER (1 BARIS MEMANJANG) -->
+      <div class="relative group px-2 sm:px-6">
+        
+        <!-- Tombol Panah Geser Kiri -->
+        <button onclick="slideGallery('left')" class="absolute -left-2 sm:left-1 top-1/2 -translate-y-1/2 z-30 w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-white/90 hover:bg-white text-brand-emerald border border-brand-gold/30 flex items-center justify-center shadow-xl transition-all active:scale-95" aria-label="Geser Kiri">
+          <i class="fa-solid fa-chevron-left text-base sm:text-lg"></i>
+        </button>
+
+        <!-- TRACK SLIDER (MEMBUAT SELURUH FOTO MASUK KE 1 BARIS SLIDE) -->
+        <div id="gallery-slider" class="flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory py-4 scrollbar-none" style="-ms-overflow-style: none; scrollbar-width: none;">
+          
+          <!-- FOTO 1 -->
+          <div class="gallery-item snap-start shrink-0 w-[85%] sm:w-[45%] lg:w-[31%] group/item relative rounded-3xl overflow-hidden h-72 cursor-pointer shadow-lg border border-brand-gold/20 transition-all duration-300 hover:shadow-2xl" data-category="kuda" onclick="openModal(this)">
+            <img src="pony1.jpeg" alt="Pony Ride" class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-700">
+            <div class="absolute inset-0 bg-brand-dark/40 opacity-0 group-hover/item:opacity-100 transition-opacity flex items-center justify-center text-white backdrop-blur-[2px]">
+              <i class="fa-solid fa-magnifying-glass-plus text-3xl text-brand-goldlight"></i>
+            </div>
+          </div>
+
+            <div class="gallery-item snap-start shrink-0 w-[85%] sm:w-[45%] lg:w-[31%] group/item relative rounded-3xl overflow-hidden h-72 cursor-pointer shadow-lg border border-brand-gold/20 transition-all duration-300 hover:shadow-2xl" data-category="kuda" onclick="openModal(this)">
+            <img src="pony2.jpeg" alt="Pony Ride" class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-700">
+            <div class="absolute inset-0 bg-brand-dark/40 opacity-0 group-hover/item:opacity-100 transition-opacity flex items-center justify-center text-white backdrop-blur-[2px]">
+              <i class="fa-solid fa-magnifying-glass-plus text-3xl text-brand-goldlight"></i>
+            </div>
+          </div>
+
+            <div class="gallery-item snap-start shrink-0 w-[85%] sm:w-[45%] lg:w-[31%] group/item relative rounded-3xl overflow-hidden h-72 cursor-pointer shadow-lg border border-brand-gold/20 transition-all duration-300 hover:shadow-2xl" data-category="kuda" onclick="openModal(this)">
+            <img src="pony3.jpeg" alt="Pony Ride" class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-700">
+            <div class="absolute inset-0 bg-brand-dark/40 opacity-0 group-hover/item:opacity-100 transition-opacity flex items-center justify-center text-white backdrop-blur-[2px]">
+              <i class="fa-solid fa-magnifying-glass-plus text-3xl text-brand-goldlight"></i>
+            </div>
+          </div>
+
+          <!-- FOTO 2 -->
+          <div class="gallery-item snap-start shrink-0 w-[85%] sm:w-[45%] lg:w-[31%] group/item relative rounded-3xl overflow-hidden h-72 cursor-pointer shadow-lg border border-brand-gold/20 transition-all duration-300 hover:shadow-2xl" data-category="resto" onclick="openModal(this)">
+            <img src="cafe1.jpeg" alt="Cafe Resto Outdoor" class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-700">
+            <div class="absolute inset-0 bg-brand-dark/40 opacity-0 group-hover/item:opacity-100 transition-opacity flex items-center justify-center text-white backdrop-blur-[2px]">
+              <i class="fa-solid fa-magnifying-glass-plus text-3xl text-brand-goldlight"></i>
+            </div>
+          </div>
+
+            <div class="gallery-item snap-start shrink-0 w-[85%] sm:w-[45%] lg:w-[31%] group/item relative rounded-3xl overflow-hidden h-72 cursor-pointer shadow-lg border border-brand-gold/20 transition-all duration-300 hover:shadow-2xl" data-category="resto" onclick="openModal(this)">
+            <img src="cafe2.jpeg" alt="Cafe Resto Outdoor" class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-700">
+            <div class="absolute inset-0 bg-brand-dark/40 opacity-0 group-hover/item:opacity-100 transition-opacity flex items-center justify-center text-white backdrop-blur-[2px]">
+              <i class="fa-solid fa-magnifying-glass-plus text-3xl text-brand-goldlight"></i>
+            </div>
+          </div>
+
+            <div class="gallery-item snap-start shrink-0 w-[85%] sm:w-[45%] lg:w-[31%] group/item relative rounded-3xl overflow-hidden h-72 cursor-pointer shadow-lg border border-brand-gold/20 transition-all duration-300 hover:shadow-2xl" data-category="resto" onclick="openModal(this)">
+            <img src="cafe3.jpeg" alt="Cafe Resto Outdoor" class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-700">
+            <div class="absolute inset-0 bg-brand-dark/40 opacity-0 group-hover/item:opacity-100 transition-opacity flex items-center justify-center text-white backdrop-blur-[2px]">
+              <i class="fa-solid fa-magnifying-glass-plus text-3xl text-brand-goldlight"></i>
+            </div>
+          </div>
+
+            <div class="gallery-item snap-start shrink-0 w-[85%] sm:w-[45%] lg:w-[31%] group/item relative rounded-3xl overflow-hidden h-72 cursor-pointer shadow-lg border border-brand-gold/20 transition-all duration-300 hover:shadow-2xl" data-category="resto" onclick="openModal(this)">
+            <img src="cafe4.jpeg" alt="Cafe Resto Outdoor" class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-700">
+            <div class="absolute inset-0 bg-brand-dark/40 opacity-0 group-hover/item:opacity-100 transition-opacity flex items-center justify-center text-white backdrop-blur-[2px]">
+              <i class="fa-solid fa-magnifying-glass-plus text-3xl text-brand-goldlight"></i>
+            </div>
+          </div>
+
+            <div class="gallery-item snap-start shrink-0 w-[85%] sm:w-[45%] lg:w-[31%] group/item relative rounded-3xl overflow-hidden h-72 cursor-pointer shadow-lg border border-brand-gold/20 transition-all duration-300 hover:shadow-2xl" data-category="resto" onclick="openModal(this)">
+            <img src="cafe5.jpeg" alt="Cafe Resto Outdoor" class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-700">
+            <div class="absolute inset-0 bg-brand-dark/40 opacity-0 group-hover/item:opacity-100 transition-opacity flex items-center justify-center text-white backdrop-blur-[2px]">
+              <i class="fa-solid fa-magnifying-glass-plus text-3xl text-brand-goldlight"></i>
+            </div>
+          </div>
+
+          <!-- FOTO 3 -->
+          <div class="gallery-item snap-start shrink-0 w-[85%] sm:w-[45%] lg:w-[31%] group/item relative rounded-3xl overflow-hidden h-72 cursor-pointer shadow-lg border border-brand-gold/20 transition-all duration-300 hover:shadow-2xl" data-category="pemandangan" onclick="openModal(this)">
+            <img src="zoo1.jpeg" alt="Mini Zoo" class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-700">
+            <div class="absolute inset-0 bg-brand-dark/40 opacity-0 group-hover/item:opacity-100 transition-opacity flex items-center justify-center text-white backdrop-blur-[2px]">
+              <i class="fa-solid fa-magnifying-glass-plus text-3xl text-brand-goldlight"></i>
+            </div>
+          </div>
+
+            <div class="gallery-item snap-start shrink-0 w-[85%] sm:w-[45%] lg:w-[31%] group/item relative rounded-3xl overflow-hidden h-72 cursor-pointer shadow-lg border border-brand-gold/20 transition-all duration-300 hover:shadow-2xl" data-category="pemandangan" onclick="openModal(this)">
+            <img src="zoo2.jpeg" alt="Mini Zoo" class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-700">
+            <div class="absolute inset-0 bg-brand-dark/40 opacity-0 group-hover/item:opacity-100 transition-opacity flex items-center justify-center text-white backdrop-blur-[2px]">
+              <i class="fa-solid fa-magnifying-glass-plus text-3xl text-brand-goldlight"></i>
+            </div>
+          </div>
+
+            <div class="gallery-item snap-start shrink-0 w-[85%] sm:w-[45%] lg:w-[31%] group/item relative rounded-3xl overflow-hidden h-72 cursor-pointer shadow-lg border border-brand-gold/20 transition-all duration-300 hover:shadow-2xl" data-category="pemandangan" onclick="openModal(this)">
+            <img src="zoo3.jpeg" alt="Mini Zoo" class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-700">
+            <div class="absolute inset-0 bg-brand-dark/40 opacity-0 group-hover/item:opacity-100 transition-opacity flex items-center justify-center text-white backdrop-blur-[2px]">
+              <i class="fa-solid fa-magnifying-glass-plus text-3xl text-brand-goldlight"></i>
+            </div>
+          </div>
+
+            <div class="gallery-item snap-start shrink-0 w-[85%] sm:w-[45%] lg:w-[31%] group/item relative rounded-3xl overflow-hidden h-72 cursor-pointer shadow-lg border border-brand-gold/20 transition-all duration-300 hover:shadow-2xl" data-category="pemandangan" onclick="openModal(this)">
+            <img src="zoo4.jpeg" alt="Mini Zoo" class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-700">
+            <div class="absolute inset-0 bg-brand-dark/40 opacity-0 group-hover/item:opacity-100 transition-opacity flex items-center justify-center text-white backdrop-blur-[2px]">
+              <i class="fa-solid fa-magnifying-glass-plus text-3xl text-brand-goldlight"></i>
+            </div>
+          </div>
+
+            <div class="gallery-item snap-start shrink-0 w-[85%] sm:w-[45%] lg:w-[31%] group/item relative rounded-3xl overflow-hidden h-72 cursor-pointer shadow-lg border border-brand-gold/20 transition-all duration-300 hover:shadow-2xl" data-category="pemandangan" onclick="openModal(this)">
+            <img src="zoo5.jpeg" alt="Mini Zoo" class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-700">
+            <div class="absolute inset-0 bg-brand-dark/40 opacity-0 group-hover/item:opacity-100 transition-opacity flex items-center justify-center text-white backdrop-blur-[2px]">
+              <i class="fa-solid fa-magnifying-glass-plus text-3xl text-brand-goldlight"></i>
+            </div>
+          </div>
+
+          <!-- SPOT FOTO AESTATIC -->
+          <div class="gallery-item snap-start shrink-0 w-[85%] sm:w-[45%] lg:w-[31%] group/item relative rounded-3xl overflow-hidden h-72 cursor-pointer shadow-lg border border-brand-gold/20 transition-all duration-300 hover:shadow-2xl" data-category="kuda" onclick="openModal(this)">
+            <img src="p1.jpeg" alt="Spot Foto Aestatic" class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-700">
+            <div class="absolute inset-0 bg-brand-dark/40 opacity-0 group-hover/item:opacity-100 transition-opacity flex items-center justify-center text-white backdrop-blur-[2px]">
+              <i class="fa-solid fa-magnifying-glass-plus text-3xl text-brand-goldlight"></i>
+            </div>
+          </div>
+
+            <div class="gallery-item snap-start shrink-0 w-[85%] sm:w-[45%] lg:w-[31%] group/item relative rounded-3xl overflow-hidden h-72 cursor-pointer shadow-lg border border-brand-gold/20 transition-all duration-300 hover:shadow-2xl" data-category="kuda" onclick="openModal(this)">
+            <img src="p2.jpeg" alt="Spot Foto Aestatic" class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-700">
+            <div class="absolute inset-0 bg-brand-dark/40 opacity-0 group-hover/item:opacity-100 transition-opacity flex items-center justify-center text-white backdrop-blur-[2px]">
+              <i class="fa-solid fa-magnifying-glass-plus text-3xl text-brand-goldlight"></i>
+            </div>
+          </div>
+
+            <div class="gallery-item snap-start shrink-0 w-[85%] sm:w-[45%] lg:w-[31%] group/item relative rounded-3xl overflow-hidden h-72 cursor-pointer shadow-lg border border-brand-gold/20 transition-all duration-300 hover:shadow-2xl" data-category="kuda" onclick="openModal(this)">
+            <img src="p3.jpeg" alt="Spot Foto Aestatic" class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-700">
+            <div class="absolute inset-0 bg-brand-dark/40 opacity-0 group-hover/item:opacity-100 transition-opacity flex items-center justify-center text-white backdrop-blur-[2px]">
+              <i class="fa-solid fa-magnifying-glass-plus text-3xl text-brand-goldlight"></i>
+            </div>
+          </div>
+
+            <div class="gallery-item snap-start shrink-0 w-[85%] sm:w-[45%] lg:w-[31%] group/item relative rounded-3xl overflow-hidden h-72 cursor-pointer shadow-lg border border-brand-gold/20 transition-all duration-300 hover:shadow-2xl" data-category="kuda" onclick="openModal(this)">
+            <img src="p5.jpeg" alt="Spot Foto Aestatic" class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-700">
+            <div class="absolute inset-0 bg-brand-dark/40 opacity-0 group-hover/item:opacity-100 transition-opacity flex items-center justify-center text-white backdrop-blur-[2px]">
+              <i class="fa-solid fa-magnifying-glass-plus text-3xl text-brand-goldlight"></i>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Tombol Panah Geser Kanan -->
+        <button onclick="slideGallery('right')" class="absolute -right-2 sm:right-1 top-1/2 -translate-y-1/2 z-30 w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-white/90 hover:bg-white text-brand-emerald border border-brand-gold/30 flex items-center justify-center shadow-xl transition-all active:scale-95" aria-label="Geser Kanan">
+          <i class="fa-solid fa-chevron-right text-base sm:text-lg"></i>
+        </button>
+      </div>
+
+      <!-- Indikator Titik (Dots) Bawah -->
+      <div id="gallery-dots" class="flex justify-center gap-2 mt-6"></div>
+
+    </div>
+  </section>
+
+  <!-- SEKSI VIDEO YOUTUBE DOKUMENTASI -->
+  <section id="video-dokumentasi" class="py-20 bg-gradient-to-b from-brand-cream via-brand-softgreen/40 to-white border-t border-emerald-900/5">
+    <div class="max-w-5xl mx-auto px-6">
+      
+      <!-- Judul Seksi Video -->
+      <div class="text-center max-w-2xl mx-auto mb-10">
+        <div class="inline-flex items-center justify-center gap-2 mb-3">
+          <span class="w-8 h-[1px] bg-brand-gold"></span>
+          <span class="text-xs uppercase tracking-[0.25em] font-semibold text-brand-gold">Video Tour</span>
+          <span class="w-8 h-[1px] bg-brand-gold"></span>
+        </div>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-dark mb-3">
+          Jelajahi Istana Stable lewat Video
+        </h2>
+        <p class="text-slate-600 font-light text-sm">
+          Saksikan keindahan suasana kawasan, aktivitas berkuda, dan keseruan pengunjung di Istana Stable Cikebo.
+        </p>
+      </div>
+
+<!-- Card Link YouTube dengan Thumbnail HQ & Tombol Play -->
+      <a href="https://youtu.be/ecQnJQBbG3g?si=KmHOkORpHffUCCY8" 
+         target="_blank" 
+         rel="noopener noreferrer" 
+         class="group relative block w-full rounded-3xl overflow-hidden shadow-2xl border-2 border-brand-gold/30 aspect-video bg-slate-900 transition-all duration-500 hover:scale-[1.01] hover:border-brand-gold hover:shadow-brand-gold/20">
+        
+        <!-- Thumbnail HQ (Dijamin Selalu Ada di YouTube) -->
+        <img src="https://img.youtube.com/vi/ecQnJQBbG3g/hqdefault.jpg" 
+             onerror="this.src='https://img.youtube.com/vi/ecQnJQBbG3g/0.jpg'"
+             alt="Thumbnail Video Istana Stable" 
+             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 filter brightness-90 group-hover:brightness-100">
+        
+        <!-- Overlay Dark Gradient -->
+        <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/80 via-black/30 to-black/20 group-hover:via-black/20 transition-all"></div>
+
+        <!-- Tombol Play YouTube Melayang di Tengah -->
+        <div class="absolute inset-0 flex flex-col items-center justify-center gap-4 text-white p-6 text-center">
+          <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-red-600 border-2 border-white/80 flex items-center justify-center text-white text-3xl sm:text-4xl shadow-2xl backdrop-blur-sm group-hover:scale-110 transition-all duration-300">
+            <i class="fa-solid fa-play ml-1"></i>
+          </div>
+          <span class="font-serif text-lg sm:text-2xl font-bold tracking-wide text-white drop-shadow-md group-hover:text-brand-goldlight transition-colors">
+            Tonton Video Istana Stable di YouTube
+          </span>
+        </div>
+
+        <!-- Badge YouTube di Sudut Atas -->
+        <div class="absolute top-4 right-4 px-3.5 py-1.5 rounded-full bg-black/70 backdrop-blur-md border border-white/20 text-white text-xs font-medium flex items-center gap-2 shadow-lg">
+          <i class="fa-brands fa-youtube text-red-500 text-sm"></i>
+          <span>Buka YouTube</span>
+        </div>
+      </a>
+
+      <!-- Keterangan Tambahan / Tombol Subscribe -->
+      <div class="mt-8 flex flex-col sm:flex-row items-center justify-between gap-4 p-5 bg-white/80 backdrop-blur-sm rounded-2xl border border-brand-gold/20 shadow-sm">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-red-600 text-white flex items-center justify-center text-lg shrink-0 shadow-md">
+            <i class="fa-brands fa-youtube"></i>
+          </div>
+          <div>
+            <h4 class="font-bold text-brand-dark text-sm">Channel YouTube Resmi</h4>
+            <p class="text-xs text-slate-500 font-light">Saksikan liputan dan momen terbaru Istana Stable</p>
+          </div>
+        </div>
+        <a href="https://youtube.com/@istanastablemajalengka?si=vELNUZ6QEgwPAATw" target="_blank" class="px-5 py-2.5 rounded-full bg-red-600 hover:bg-red-700 text-white font-semibold text-xs tracking-wider transition-all shadow-md flex items-center gap-2">
+          <span>Tonton di YouTube</span>
+          <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- LOKASI & JAM OPERASIONAL SECTION -->
+  <section id="lokasi" class="py-24 bg-gradient-to-b from-brand-cream via-brand-softgreen/50 to-white relative border-t border-emerald-900/5">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 grid lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <div class="inline-flex items-center gap-2 mb-3">
+          <span class="w-8 h-[1px] bg-brand-gold"></span>
+          <span class="text-xs uppercase tracking-[0.25em] font-semibold text-brand-gold">Petunjuk Kunjungan</span>
+        </div>
+        <h2 class="font-serif text-3xl sm:text-5xl font-bold text-brand-dark mb-6">
+          Lokasi & Jam Operasional
+        </h2>
+        <p class="text-slate-600 font-light mb-8 leading-relaxed">
+          Istana Stable berlokasi strategis di jalur wisata utama Cikebo, Desa Tegalsari, Kecamatan Maja, Kabupaten Majalengka. Akses mudah dijangkau kendaraan pribadi maupun bus rombongan.
+        </p>
+
+        <div class="bg-white rounded-2xl p-6 border border-brand-gold/20 shadow-lg mb-8">
+          <h3 class="font-serif font-bold text-brand-dark text-lg mb-4 flex items-center gap-3">
+            <i class="fa-regular fa-clock text-brand-gold"></i>
+            <span>Jam Operasional Kawasan</span>
+          </h3>
+          <div class="space-y-3 text-sm">
+            <div class="flex justify-between items-center pb-2 border-b border-slate-100">
+              <span class="text-slate-600">Senin - Minggu (Setiap Hari)</span>
+              <span class="font-semibold text-brand-emerald">08.00 - 17.00 WIB</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-700">
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded-full bg-brand-softgreen border border-brand-emerald/20 flex items-center justify-center text-brand-emerald shrink-0 mt-1 shadow-sm">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-brand-dark">Alamat Lengkap</h4>
+              <p class="font-light text-slate-600">RT 01 / RW 01 Cikebo, Tegalsari, Kec. Maja, Kabupaten Majalengka, Jawa Barat 45461</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded-full bg-brand-softgreen border border-brand-emerald/20 flex items-center justify-center text-brand-emerald shrink-0 mt-1 shadow-sm">
+              <i class="fa-solid fa-phone"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-brand-dark">Kontak Hotline</h4>
+              <p class="font-light text-slate-600">+62 812-3456-7890 (WhatsApp)</p>
+            </div>
+          </div>
+        </div>
+
+        <a href="https://www.google.com/maps/search/?api=1&query=Istana+Stable+Equestrian+Park+Majalengka" target="_blank" class="btn-gold inline-flex mt-8 shadow-md">
+          <i class="fa-solid fa-map-location-dot"></i>
+          <span>Buka Google Maps</span>
+        </a>
+      </div>
+
+      <div class="h-[450px] rounded-3xl overflow-hidden border-2 border-brand-gold/30 shadow-2xl relative">
+        <iframe 
+          src="https://maps.google.com/maps?q=Istana%20Stable%20Equestrian%20Park%20Majalengka&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+          width="100%" 
+          height="100%" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-brand-dark text-white pt-16 pb-12 border-t border-brand-gold/30">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 grid md:grid-cols-3 gap-12 mb-12">
+      <div>
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-10 h-10 rounded-full border border-brand-gold/40 flex items-center justify-center bg-brand-emerald text-brand-gold">
+            <i class="fa-solid fa-horse-head"></i>
+          </div>
+          <span class="font-serif text-2xl font-bold tracking-wider text-white">ISTANA STABLE</span>
+        </div>
+        <p class="text-xs text-brand-cream/60 font-light leading-relaxed max-w-sm mb-6">
+          Kawasan wisata equestrian, tempat bersantai, dan kuliner terpadu berudara sejuk di dataran tinggi Cikebo Majalengka.
+        </p>
+      </div>
+
+      <div>
+        <h4 class="font-serif text-lg font-bold text-brand-goldlight mb-4">Navigasi Utama</h4>
+        <ul class="space-y-2 text-xs font-light text-brand-cream/70">
+          <li><a href="#home" class="hover:text-brand-gold transition-colors">Beranda</a></li>
+          <li><a href="#tentang" class="hover:text-brand-gold transition-colors">Tentang Kami</a></li>
+          <li><a href="#wisata" class="hover:text-brand-gold transition-colors">Wisata & Rekreasi</a></li>
+          <li><a href="#fasilitas" class="hover:text-brand-gold transition-colors">Fasilitas Umum</a></li>
+          <li><a href="#galeri" class="hover:text-brand-gold transition-colors">Galeri Foto</a></li>
+          <li><a href="#lokasi" class="hover:text-brand-gold transition-colors">Lokasi & Kontak</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-serif text-lg font-bold text-brand-goldlight mb-4">Hubungi & Ikuti Kami</h4>
+        <div class="flex items-center gap-3 mb-6">
+          <a href="https://www.instagram.com/istanastable?xtok=Y3pudHA3Z3pkNHRt" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-brand-emerald border border-brand-gold/30 flex items-center justify-center text-brand-gold hover:bg-brand-gold hover:text-brand-dark transition-all" aria-label="Instagram Istana Stable">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://www.facebook.com/share/1FBH6VqTiP/" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-brand-emerald border border-brand-gold/30 flex items-center justify-center text-brand-gold hover:bg-brand-gold hover:text-brand-dark transition-all" aria-label="Facebook Istana Stable">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+        </div>
+        <p class="text-xs text-brand-cream/60">Jl. Raya Cikebo, Maja, Majalengka, Jawa Barat</p>
+      </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 pt-8 border-t border-brand-gold/10 text-center text-[11px] text-brand-cream/40 tracking-wider">
+      <p>&copy; 2026 Istana Stable Cikebo Majalengka. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+<!-- MODAL ZOOM GAMBAR DENGAN TOMBOL PANAH SLIDE -->
+  <div id="imageModal" class="fixed inset-0 z-[100] bg-black/90 backdrop-blur-md hidden items-center justify-center p-4">
+    <!-- Tombol Close (X) -->
+    <button onclick="closeModal()" class="absolute top-6 right-8 text-white/80 hover:text-brand-gold text-4xl transition-colors z-[110]" aria-label="Tutup Pop-up">&times;</button>
+    
+    <!-- Tombol Panah Kiri (Sebelumnya) -->
+    <button onclick="prevModalImg(event)" class="absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 text-white/80 hover:text-brand-gold text-3xl sm:text-4xl bg-black/40 hover:bg-black/70 w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center backdrop-blur-sm border border-white/20 transition-all z-[110]" aria-label="Gambar Sebelumnya">
+      <i class="fa-solid fa-chevron-left"></i>
+    </button>
+
+    <!-- Tempat Gambar Tampil -->
+    <div class="relative max-w-4xl max-h-[85vh] flex flex-col items-center justify-center">
+      <img id="modalImg" src="" alt="Full Preview" class="max-w-full max-h-[80vh] rounded-2xl border-2 border-brand-gold/40 shadow-2xl object-contain transition-all duration-300">
+      <!-- Caption / Nama Foto -->
+      <p id="modalCaption" class="text-white/90 text-sm font-medium mt-4 tracking-wide font-serif text-center"></p>
+    </div>
+
+    <!-- Tombol Panah Kanan (Selanjutnya) -->
+    <button onclick="nextModalImg(event)" class="absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 text-white/80 hover:text-brand-gold text-3xl sm:text-4xl bg-black/40 hover:bg-black/70 w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center backdrop-blur-sm border border-white/20 transition-all z-[110]" aria-label="Gambar Selanjutnya">
+      <i class="fa-solid fa-chevron-right"></i>
+    </button>
+  </div>
+
+  <!-- FLOATING WHATSAPP BUTTON -->
+  <a href="https://wa.me/6281234567890?text=Halo%20Istana%20Stable%20Cikebo,%20saya%20ingin%20tanya%20info%20kunjungan" target="_blank" class="fixed bottom-6 right-6 z-40 bg-emerald-600 hover:bg-emerald-500 text-white p-4 rounded-full shadow-2xl flex items-center justify-center gap-2 group transition-all duration-300 hover:scale-110 border border-emerald-400/40">
+    <i class="fa-brands fa-whatsapp text-2xl relative z-10"></i>
+    <span class="max-w-0 overflow-hidden whitespace-nowrap group-hover:max-w-xs transition-all duration-500 text-xs font-bold uppercase tracking-wider relative z-10">Reservasi WA</span>
+  </a>
+
+  <!-- Script JS External -->
+  <script src="script.js"></script>
+</body>
+</html>
